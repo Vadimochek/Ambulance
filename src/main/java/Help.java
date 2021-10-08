@@ -1,5 +1,9 @@
 
 public class Help {
-    public void getTemperature(){
+    public static void main(String[] args) {
+
+    }
+
+    public double getTemperature(){
     }
 }
