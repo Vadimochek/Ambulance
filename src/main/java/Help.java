@@ -20,5 +20,8 @@ public class Help {
             return 0;
         }
     }
+    public boolean orvi(String say){
+        return say.equals("Да")||say.equals("да");
+    }
 
 }

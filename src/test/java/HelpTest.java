@@ -15,10 +15,8 @@ public class HelpTest {
     }
     @Test
     public void orviTest(){
-        Boolean gripp= true;
-        Assert.assertEquals(gripp,orvi("yes"));
-        gripp=false;
-        Assert.assertEquals(gripp,orvi("no"));
+        Assert.assertTrue(help.orvi("Да"));
+        Assert.assertFalse(help.orvi("Нет"));
     }
 
 }
