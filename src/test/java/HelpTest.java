@@ -13,5 +13,12 @@ public class HelpTest {
         double temp3=36.0;
         Assert.assertEquals(help.getTemperature(temp3),-1);
     }
+    @Test
+    public void orviTest(){
+        Boolean gripp= true;
+        Assert.assertEquals(gripp,orvi("yes"));
+        gripp=false;
+        Assert.assertEquals(gripp,orvi("no"));
+    }
 
 }
