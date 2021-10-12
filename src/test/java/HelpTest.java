@@ -34,6 +34,7 @@ public class HelpTest {
     }
     @Test
     public void simptomsTest(){
-        
+        Assert.assertTrue(help.simptoms("Да"));
+        Assert.assertFalse(help.simptoms("Нет"));
     }
 }
