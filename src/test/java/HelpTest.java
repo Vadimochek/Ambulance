@@ -18,5 +18,16 @@ public class HelpTest {
         Assert.assertTrue(help.orvi("Да"));
         Assert.assertFalse(help.orvi("Нет"));
     }
+    @Test
+    public void DiabetTest(){
+
+    }
+    @Test
+    public void RotovirusTest(){
+        Assert.assertEquals(help.rvirus("Да", "Нет"),0);
+        Assert.assertEquals(help.rvirus("Нет", "Да"),0);
+        Assert.assertEquals(help.rvirus("Нет", "Нет"),-1);
+        Assert.assertEquals(help.rvirus("Да", "Да"),1);
+    }
 
 }
