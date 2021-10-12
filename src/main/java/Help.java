@@ -23,5 +23,15 @@ public class Help {
     public boolean orvi(String say){
         return say.equals("Да")||say.equals("да");
     }
-
+    public int rvirus(String say, String say2){
+        if (say.equals(say2) && (say.equals("Да") || say.equals("да"))){
+            return 1;
+        }
+        else if (say.equals(say2) && (say.equals("Нет") || say.equals("нет"))){
+            return -1;
+        }
+        else {
+            return 0;
+        }
+    }
 }
