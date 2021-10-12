@@ -34,4 +34,18 @@ public class Help {
             return 0;
         }
     }
+    public int diabet(String s1, String s2){
+        if (s2.equals(s1) && (s2.equals("Да") || s2.equals("да"))){
+            return 1;
+        }
+        else if (s2.equals(s1) && (s2.equals("Нет") || s2.equals("нет"))){
+            return -1;
+        }
+        else {
+            return 0;
+        }
+    }
+    public boolean simptoms(String say){
+        return say.equals("Да")||say.equals("да");
+    }
 }
