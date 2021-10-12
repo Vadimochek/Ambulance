@@ -20,7 +20,10 @@ public class HelpTest {
     }
     @Test
     public void DiabetTest(){
-
+        Assert.assertEquals(help.diabet("Да", "Нет"),0);
+        Assert.assertEquals(help.diabet("Нет", "Нет"),-1);
+        Assert.assertEquals(help.diabet("Нет", "Да"), 0);
+        Assert.assertEquals(help.diabet("Да", "Да"),1);
     }
     @Test
     public void RotovirusTest(){
@@ -29,5 +32,8 @@ public class HelpTest {
         Assert.assertEquals(help.rvirus("Нет", "Нет"),-1);
         Assert.assertEquals(help.rvirus("Да", "Да"),1);
     }
-
+    @Test
+    public void simptomsTest(){
+        
+    }
 }
