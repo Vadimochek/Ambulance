@@ -26,7 +26,7 @@ public class HelpTest {
         Assert.assertEquals(help.diabet("Да", "Да"),1);
     }
     @Test
-    public void RotovirusTest(){
+    public void RotavirusTest(){
         Assert.assertEquals(help.rvirus("Да", "Нет"),0);
         Assert.assertEquals(help.rvirus("Нет", "Да"),0);
         Assert.assertEquals(help.rvirus("Нет", "Нет"),-1);
@@ -36,5 +36,14 @@ public class HelpTest {
     public void simptomsTest(){
         Assert.assertTrue(help.simptoms("Да"));
         Assert.assertFalse(help.simptoms("Нет"));
+    }
+    @Test
+    public void diagnoseTest(){
+        Assert.assertEquals(diagnose(1,true, -1, -1, true),"У Вас, скорее всего, ОРВИ. Обратитесь к врачу.");
+        Assert.assertEquals(diagnose(1, true, -1, 1, true),"У Вас, скорее всего, ротавирус. Обратитесь к врачу.");
+        Assert.assertEquals(diagnose(1, false, 1, -1, true),"У Вас может быть диабет! Сдайте кровь на анализ.");
+        Assert.assertEquals(diagnose(0, false, -1, -1, false),"Вы здоровы");
+        Assert.assertEquals(diagnose(-1, false, -1, -1, true),"У Вас лёгкое недомогание");
+        Assert.assertEquals(diagnose(0, true, -1, -1, false),"У Вас лёгкая форма ОРВИ");
     }
 }
