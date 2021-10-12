@@ -48,4 +48,12 @@ public class Help {
     public boolean simptoms(String say){
         return say.equals("Да")||say.equals("да");
     }
+    public String diagnose(int temp, boolean orvibool, int diabetik, int rotavirus,boolean simpts){
+        if (temp==1 && orvibool && simpts && rotavirus!=1) return "У Вас, скорее всего, ОРВИ. Обратитесь к врачу.";
+        else if ((temp==1 || orvibool) && rotavirus>=0 ) return "У Вас, скорее всего, ротавирус. Обратитесь к врачу.";
+        else if (diabetik>=0 && simpts) return "У Вас может быть диабет! Сдайте кровь на анализ.";
+        else if (orvibool && temp==0 && !simpts) return "У Вас лёгкая форма ОРВИ";
+        else if (temp==0 && !orvibool && !simpts && diabetik==-1 && rotavirus==-1) return "Вы здоровы";
+        else return "У Вас лёгкое недомогание";
+    }
 }

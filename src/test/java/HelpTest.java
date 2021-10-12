@@ -39,11 +39,11 @@ public class HelpTest {
     }
     @Test
     public void diagnoseTest(){
-        Assert.assertEquals(diagnose(1,true, -1, -1, true),"У Вас, скорее всего, ОРВИ. Обратитесь к врачу.");
-        Assert.assertEquals(diagnose(1, true, -1, 1, true),"У Вас, скорее всего, ротавирус. Обратитесь к врачу.");
-        Assert.assertEquals(diagnose(1, false, 1, -1, true),"У Вас может быть диабет! Сдайте кровь на анализ.");
-        Assert.assertEquals(diagnose(0, false, -1, -1, false),"Вы здоровы");
-        Assert.assertEquals(diagnose(-1, false, -1, -1, true),"У Вас лёгкое недомогание");
-        Assert.assertEquals(diagnose(0, true, -1, -1, false),"У Вас лёгкая форма ОРВИ");
+        Assert.assertEquals(help.diagnose(1,true, -1, -1, true),"У Вас, скорее всего, ОРВИ. Обратитесь к врачу.");
+        Assert.assertEquals(help.diagnose(1, true, -1, 1, true),"У Вас, скорее всего, ротавирус. Обратитесь к врачу.");
+        Assert.assertEquals(help.diagnose(1, false, 1, -1, true),"У Вас может быть диабет! Сдайте кровь на анализ.");
+        Assert.assertEquals(help.diagnose(0, false, -1, -1, false),"Вы здоровы");
+        Assert.assertEquals(help.diagnose(-1, false, -1, -1, true),"У Вас лёгкое недомогание");
+        Assert.assertEquals(help.diagnose(0, true, -1, -1, false),"У Вас лёгкая форма ОРВИ");
     }
 }
